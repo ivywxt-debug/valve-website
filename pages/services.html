@@ -138,227 +138,247 @@ PAGE INTRODUCTION
 SERVICE OVERVIEW
 ========================================= -->
 
-<section class="section">
+<section class="services-grid-section">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-heading">
+        <div class="section-heading">
 
-<div>
+            <div>
 
-<p class="section-label">
+                <p class="section-label">
+                    Our Services
+                </p>
 
-SERVICE PACKAGES
+                <h2>
+                    Professional Services
+                </h2>
 
-</p>
+            </div>
 
-<h2>
+            <p class="section-description">
 
-Professional Services
+                We support customers throughout the entire project
+                lifecycle, from engineering consultation and OEM
+                manufacturing to quality assurance and responsive
+                after-sales service.
 
-</h2>
+            </p>
 
-</div>
+        </div>
 
-<p>
+        <div class="services-grid">
 
-We support our customers throughout
-the entire project lifecycle,
-from quotation and production
-to inspection and after-sales support.
+            <!-- Technical -->
 
-</p>
+            <article class="service-card">
 
-</div>
+                <div class="service-card-top support">
 
+                    <span class="service-number">01</span>
 
+                </div>
 
-<div class="service-grid">
+                <div class="service-card-body">
 
+                    <h3>Technical Support</h3>
 
+                    <p>
 
-<!-- Card -->
+                        Product consultation,
+                        engineering review,
+                        installation guidance.
 
-<article class="service-card">
+                    </p>
 
-<div class="service-card-image support">
+                    <button
+                        class="service-more-button"
+                        data-service="technical">
 
-<span>
+                        Learn More →
 
-01
+                    </button>
 
-</span>
+                </div>
 
-</div>
+            </article>
 
-<div class="service-card-content">
 
-<h3>
+            <!-- OEM -->
 
-Technical Support
+            <article class="service-card">
 
-</h3>
+                <div class="service-card-top oem">
 
-<p>
+                    <span class="service-number">02</span>
 
-Professional assistance with
-product selection,
-technical specifications
-and engineering consultation.
+                </div>
 
-</p>
+                <div class="service-card-body">
 
-<button
-  class="service-more-button"
-  type="button"
-  data-service="technical"
->
-  View More →
-</button>
+                    <h3>OEM Manufacturing</h3>
 
-</div>
+                    <p>
 
-</article>
+                        Custom manufacturing
+                        according to drawings,
+                        samples and specifications.
 
+                    </p>
 
+                    <button
+                        class="service-more-button"
+                        data-service="oem">
 
-<!-- Card -->
+                        Learn More →
 
-<article class="service-card">
+                    </button>
 
-<div class="service-card-image manufacturing">
+                </div>
 
-<span>
+            </article>
 
-02
 
-</span>
+            <!-- Quality -->
 
-</div>
+            <article class="service-card">
 
-<div class="service-card-content">
+                <div class="service-card-top quality">
 
-<h3>
+                    <span class="service-number">03</span>
 
-OEM Manufacturing
+                </div>
 
-</h3>
+                <div class="service-card-body">
 
-<p>
+                    <h3>Quality Assurance</h3>
 
-Custom manufacturing based
-on customer drawings,
-samples and specifications.
+                    <p>
 
-</p>
+                        Inspection,
+                        testing,
+                        documentation
+                        and traceability.
 
-<button
-  class="service-more-button"
-  type="button"
-  data-service="oem"
->
-  View More →
-</button>
+                    </p>
 
-</div>
+                    <button
+                        class="service-more-button"
+                        data-service="quality">
 
-</article>
+                        Learn More →
 
+                    </button>
 
+                </div>
 
-<!-- Card -->
+            </article>
 
-<article class="service-card">
 
-<div class="service-card-image inspection">
+            <!-- After Sales -->
 
-<span>
+            <article class="service-card">
 
-03
+                <div class="service-card-top service">
 
-</span>
+                    <span class="service-number">04</span>
 
-</div>
+                </div>
 
-<div class="service-card-content">
+                <div class="service-card-body">
 
-<h3>
+                    <h3>After-sales Service</h3>
 
-Quality Assurance
+                    <p>
 
-</h3>
+                        Warranty support,
+                        technical assistance
+                        and customer care.
 
-<p>
+                    </p>
 
-Comprehensive inspection,
-quality documentation
-and manufacturing control.
+                    <button
+                        class="service-more-button"
+                        data-service="aftersales">
 
-</p>
+                        Learn More →
 
-<button
-  class="service-more-button"
-  type="button"
-  data-service="quality"
->
-  View More →
-</button>
+                    </button>
 
-</div>
+                </div>
 
-</article>
+            </article>
 
+        </div>
 
-
-<!-- Card -->
-
-<article class="service-card">
-
-<div class="service-card-image aftersales">
-
-<span>
-
-04
-
-</span>
-
-</div>
-
-<div class="service-card-content">
-
-<h3>
-
-After-sales Service
-
-</h3>
-
-<p>
-
-Responsive customer support,
-technical assistance
-and warranty services.
-
-</p>
-
-<button
-  class="service-more-button"
-  type="button"
-  data-service="after-sales"
->
-  View More →
-</button>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
+<div
+class="service-modal"
+id="serviceModal"
+aria-hidden="true">
 
+    <div class="service-modal-backdrop"></div>
+
+    <div
+    class="service-modal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="serviceModalTitle">
+
+        <div class="service-modal-header">
+
+            <div>
+
+                <p class="service-modal-label">
+                    SERVICE DETAILS
+                </p>
+
+                <h2 id="serviceModalTitle">
+                    Service
+                </h2>
+
+            </div>
+
+            <button
+            class="service-modal-close">
+
+                ×
+
+            </button>
+
+        </div>
+
+        <div
+        class="service-modal-body"
+        id="serviceModalBody">
+
+        </div>
+
+        <div class="service-modal-footer">
+
+            <a
+            href="contact.html"
+            class="button button-primary">
+
+                Contact Us
+
+            </a>
+
+            <button
+            class="button button-outline service-modal-secondary-close">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 
@@ -372,608 +392,115 @@ CONTENT
 <!-- LEFT -->
 
 <div class="service-main"><!-- =========================================
-SERVICE COMMITMENT
-========================================= -->
-
-<section class="service-content-block">
-
-  <p class="service-block-label">
-    Our Commitment
-  </p>
-
-  <h2>
-    Reliable Support Throughout Every Stage
-  </h2>
-
-  <p class="service-block-intro">
-    From initial quotation to production, delivery and after-sales
-    support, our team is committed to providing clear communication,
-    practical technical assistance and dependable service.
-  </p>
-
-
-  <div class="service-detail-list">
-
-    <!-- Item 01 -->
-    <article class="service-detail-item">
-
-      <span class="service-detail-number">
-        01
-      </span>
-
-      <div class="service-detail-copy">
-
-        <h3>
-          Warranty Support
-        </h3>
-
-        <p>
-          Under proper storage, installation, maintenance and operating
-          conditions, products that cannot function normally because of
-          manufacturing-quality issues are covered by our warranty support.
-        </p>
-
-        <p>
-          Depending on the condition of the product and the nature of the
-          issue, support may include repair, replacement parts, product
-          replacement or another appropriate solution.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- Item 02 -->
-    <article class="service-detail-item">
-
-      <span class="service-detail-number">
-        02
-      </span>
-
-      <div class="service-detail-copy">
-
-        <h3>
-          Initial Response Within 24 Hours
-        </h3>
-
-        <p>
-          After receiving a customer inquiry, quality complaint or
-          technical-support request, our team will provide an initial
-          response within 24 hours.
-        </p>
-
-        <p>
-          Urgent issues will be reviewed as quickly as possible based on
-          the available product information and operating conditions.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- Item 03 -->
-    <article class="service-detail-item">
-
-      <span class="service-detail-number">
-        03
-      </span>
-
-      <div class="service-detail-copy">
-
-        <h3>
-          Technical Documentation
-        </h3>
-
-        <p>
-          Relevant technical documents and product records can be provided
-          according to customer, order and project requirements.
-        </p>
-
-        <ul class="service-detail-points">
-          <li>Product specifications and dimensional information</li>
-          <li>Material information and available material certificates</li>
-          <li>Product certificates and qualification documents</li>
-          <li>Inspection records or reports, when available</li>
-          <li>Packaging and shipment documentation</li>
-        </ul>
-
-      </div>
-
-    </article>
-
-
-    <!-- Item 04 -->
-    <article class="service-detail-item">
-
-      <span class="service-detail-number">
-        04
-      </span>
-
-      <div class="service-detail-copy">
-
-        <h3>
-          Technical Assistance
-        </h3>
-
-        <p>
-          According to the product, application and contractual
-          requirements, we can provide technical assistance before and
-          after delivery.
-        </p>
-
-        <ul class="service-detail-points">
-          <li>Product selection consultation</li>
-          <li>Installation guidance</li>
-          <li>Commissioning assistance</li>
-          <li>Maintenance consultation</li>
-          <li>Replacement-part recommendations</li>
-          <li>Technical training when required</li>
-        </ul>
-
-      </div>
-
-    </article>
-
-
-    <!-- Item 05 -->
-    <article class="service-detail-item">
-
-      <span class="service-detail-number">
-        05
-      </span>
-
-      <div class="service-detail-copy">
-
-        <h3>
-          Engineering Project Support
-        </h3>
-
-        <p>
-          For larger engineering and industrial projects, we can review
-          tender documents, drawings, specifications and inspection
-          requirements before production.
-        </p>
-
-        <p>
-          Production planning, testing, inspection and acceptance
-          procedures can be coordinated according to confirmed technical
-          requirements and contractual agreements.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- Item 06 -->
-    <article class="service-detail-item">
-
-      <span class="service-detail-number">
-        06
-      </span>
-
-      <div class="service-detail-copy">
-
-        <h3>
-          Quality-Control Procedures
-        </h3>
-
-        <p>
-          Raw-material purchasing, component manufacturing, dimensional
-          inspection, final verification, packaging and documentation are
-          managed according to our established quality-control procedures.
-        </p>
-
-        <p>
-          Additional inspection requirements can be discussed during the
-          quotation and technical-review stage.
-        </p>
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-OEM & CUSTOM MANUFACTURING
-========================================= -->
-
-<section class="service-content-block service-oem-block">
-
-  <p class="service-block-label">
-    OEM & Custom Manufacturing
-  </p>
-
-  <h2>
-    Production Based on Your Requirements
-  </h2>
-
-  <p class="service-block-intro">
-    We support custom manufacturing based on technical drawings,
-    physical samples and confirmed product specifications.
-  </p>
-
-
-  <div class="service-feature-grid">
-
-    <article class="service-feature-card">
-
-      <span>
-        01
-      </span>
-
-      <h3>
-        Drawing Review
-      </h3>
-
-      <p>
-        We review dimensions, tolerances, materials and technical
-        requirements before quotation.
-      </p>
-
-    </article>
-
-
-    <article class="service-feature-card">
-
-      <span>
-        02
-      </span>
-
-      <h3>
-        Material Selection
-      </h3>
-
-      <p>
-        Material options can be discussed according to application,
-        performance and cost requirements.
-      </p>
-
-    </article>
-
-
-    <article class="service-feature-card">
-
-      <span>
-        03
-      </span>
-
-      <h3>
-        Sample Production
-      </h3>
-
-      <p>
-        Sample production and confirmation can be arranged before
-        volume manufacturing when required.
-      </p>
-
-    </article>
-
-
-    <article class="service-feature-card">
-
-      <span>
-        04
-      </span>
-
-      <h3>
-        Batch Production
-      </h3>
-
-      <p>
-        Production planning can be adjusted according to confirmed
-        quantities and delivery requirements.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-AFTER-SALES SERVICE
-========================================= -->
-
-<section
-  class="service-content-block service-after-sales-block"
-  id="after-sales"
->
-
-  <p class="service-block-label">
-    After-Sales Service
-  </p>
-
-  <h2>
-    How We Handle Service Requests
-  </h2>
-
-  <p class="service-block-intro">
-    When a product issue occurs, customers may contact our sales or
-    service team by phone or email. Providing complete information helps
-    us evaluate the issue and respond more efficiently.
-  </p>
-
-
-  <div class="after-sales-information">
-
-    <h3>
-      Please prepare the following information:
-    </h3>
-
-    <ul class="after-sales-checklist">
-      <li>Product model or item name</li>
-      <li>Product specification and material</li>
-      <li>Application and operating conditions</li>
-      <li>Description of the issue</li>
-      <li>Purchase date or order reference</li>
-      <li>Photos or videos, when available</li>
-    </ul>
-
-  </div>
-
-
-  <div class="after-sales-process">
-
-    <article class="after-sales-step">
-
-      <span>
-        01
-      </span>
-
-      <h3>
-        Submit Information
-      </h3>
-
-      <p>
-        Send the relevant product details, operating information and
-        supporting images.
-      </p>
-
-    </article>
-
-
-    <article class="after-sales-step">
-
-      <span>
-        02
-      </span>
-
-      <h3>
-        Technical Review
-      </h3>
-
-      <p>
-        Our team reviews the reported condition and identifies possible
-        causes.
-      </p>
-
-    </article>
-
-
-    <article class="after-sales-step">
-
-      <span>
-        03
-      </span>
-
-      <h3>
-        Solution Proposal
-      </h3>
-
-      <p>
-        We provide technical advice, repair guidance, replacement parts
-        or another suitable solution.
-      </p>
-
-    </article>
-
-
-    <article class="after-sales-step">
-
-      <span>
-        04
-      </span>
-
-      <h3>
-        Follow-Up
-      </h3>
-
-      <p>
-        We follow up with the customer to confirm the result and close
-        the service request.
-      </p>
-
-    </article>
-
-  </div>
-
-</section><!-- =========================================
-RIGHT SIDEBAR
 ========================================= -->
 
 </div>
 
-<!-- SIDEBAR -->
-
-<aside class="service-sidebar">
-
-    <div class="sidebar-card">
-
-        <p class="section-label">
-
-            CONTACT US
-
-        </p>
-
-        <h2>
-
-            Customer Support
-
-        </h2>
-
-        <p>
-
-            Contact our sales and engineering team for
-            quotations, technical consultation or
-            after-sales assistance.
-
-        </p>
-
-        <div class="sidebar-item">
-
-            <span>
-
-                Phone
-
-            </span>
-
-            <a href="tel:+8613800000000">
-
-                xxx-xxxx-xxx
-
-            </a>
-
-        </div>
-
-        <div class="sidebar-item">
-
-            <span>
-
-                Fax
-
-            </span>
-
-            <p>
-
-                xxx-xxxx-xxx
-
-            </p>
-
-        </div>
-
-        <div class="sidebar-item">
-
-            <span>
-
-                Email
-
-            </span>
-
-            <a href="mailto:info@company.com">
-
-                info@company.com
-
-            </a>
-
-        </div>
-
-        <div class="sidebar-item">
-
-            <span>
-
-                Business Hours
-
-            </span>
-
-            <p>
-
-                Monday – Friday
-
-                <br>
-
-                08:30 – 17:30 (GMT+8)
-
-            </p>
-
-        </div>
-
-        <div class="sidebar-item">
-
-            <span>
-
-                Address
-
-            </span>
-
-            <p>
-
-                Wenzhou, Zhejiang
-
-                <br>
-
-                China
-
-            </p>
-
-        </div>
-
-        <a
-            href="contact.html"
-            class="button button-primary sidebar-button">
-
-            Send Inquiry
-
-        </a>
-
-    </div>
-
-</aside>
-
-</div>
-
-</section>
-
-
-
+<!-- Contact Card -->
 
 
 <!-- =========================================
-CALL TO ACTION
+Contact Card 
 ========================================= -->
 
-<section class="cta-section">
+<section class="service-contact">
 
-    <div class="container cta-content">
+    <div class="container">
 
-        <div>
+        <div class="service-contact-box">
 
-            <p class="light-label">
+            <!-- Top Row -->
+            <div class="service-contact-top">
 
-                READY TO START?
+                <div class="service-contact-left">
 
-            </p>
+                    <p class="section-label">
+                        Contact Us
+                    </p>
 
-            <h2>
+                    <h2>
+                        Need Technical Assistance?
+                    </h2>
 
-                Let's Discuss Your Project
+                    <p class="service-contact-intro">
+                        Whether you need technical consultation,
+                        OEM manufacturing, quality assurance or
+                        after-sales support, our engineering team
+                        is ready to help.
+                    </p>
 
-            </h2>
+                </div>
 
-            <p>
+                <div class="service-contact-right">
 
-                Whether you require standard valve components
-                or custom manufacturing, our team is ready
-                to help.
+                    <a
+                        href="contact.html"
+                        class="button button-primary"
+                    >
+                        Request a Quote
+                    </a>
 
-            </p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Bottom Row -->
+
+            <div class="contact-info-grid">
+
+                <div class="contact-item">
+
+                    <span class="contact-title">
+                        Phone
+                    </span>
+
+                    <p>
+                        +86-577-XXXXXXX
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span class="contact-title">
+                        Email
+                    </span>
+
+                    <p>
+                        sales@company.com
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span class="contact-title">
+                        Address
+                    </span>
+
+                    <p>
+                        Wenzhou, Zhejiang, China
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span class="contact-title">
+                        Response
+                    </span>
+
+                    <p>
+                        Within 24 Hours
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
-
-        <a
-            href="contact.html"
-            class="button button-light">
-
-            Contact Us
-
-        </a>
 
     </div>
 
@@ -1137,12 +664,12 @@ FOOTER
 
   <div class="service-modal-backdrop"></div>
 
-<div
-    class="service-modal-window"
+  <div
+    class="service-modal-panel"
     role="dialog"
     aria-modal="true"
     aria-labelledby="serviceModalTitle"
->
+  >
 
     <div class="service-modal-header">
 

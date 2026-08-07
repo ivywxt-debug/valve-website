@@ -23,39 +23,72 @@ const serviceModalBackdrop = document.querySelector(
 const serviceContent = {
   technical: {
     title: "Technical Support",
-
+    
     body: `
-      <h3>Product Selection and Consultation</h3>
+    <div class="modal-section">
 
-      <p>
-        We provide support with product selection, specifications,
-        materials and application requirements.
-      </p>
+    <h3>Engineering Consultation</h3>
 
-      <p>
-        Customers may send technical drawings, samples or operating
-        information for preliminary review.
-      </p>
+    <p>
+        Our engineers help customers select the correct valve
+        components according to pressure rating, working media,
+        operating temperature and industry standards.
+    </p>
 
-      <h3>Available Technical Assistance</h3>
+</div>
 
-      <ul>
-        <li>Product selection consultation</li>
-        <li>Technical specification review</li>
-        <li>Material recommendations</li>
-        <li>Installation guidance</li>
-        <li>Commissioning assistance</li>
-        <li>Maintenance consultation</li>
-        <li>Replacement-part recommendations</li>
-      </ul>
+<div class="modal-section">
 
-      <h3>Technical Documentation</h3>
+    <h3>Technical Support Includes</h3>
 
-      <p>
-        Product specifications, certificates, inspection records and
-        other available documents can be supplied according to order
-        and project requirements.
-      </p>
+    <ul class="modal-checklist">
+
+        <li>Product Selection Consultation</li>
+        <li>Technical Specification Review</li>
+        <li>Material Recommendations</li>
+        <li>Installation Guidance</li>
+        <li>Commissioning Assistance</li>
+        <li>Maintenance Consultation</li>
+        <li>Replacement Part Recommendations</li>
+
+    </ul>
+
+</div>
+
+<div class="modal-section">
+
+    <h3>Technical Documents</h3>
+
+    <div class="document-grid">
+
+        <div>Material Certificates</div>
+        <div>Inspection Reports</div>
+        <div>Pressure Test Reports</div>
+        <div>Dimensional Reports</div>
+        <div>Quality Certificates</div>
+        <div>Packing Documents</div>
+
+    </div>
+
+</div>
+
+<div class="modal-section">
+
+    <h3>Service Workflow</h3>
+
+    <div class="process-flow">
+
+        <span>Inquiry</span>
+        <span>→</span>
+        <span>Drawing Review</span>
+        <span>→</span>
+        <span>Quotation</span>
+        <span>→</span>
+        <span>Production</span>
+
+    </div>
+
+</div>
     `
   },
 
@@ -183,9 +216,10 @@ const serviceContent = {
         and proposes an appropriate solution. Follow-up support will be
         provided until the service request is completed.
       </p>
-    `
+    
+      `
   }
-};
+  }；
 
 
 function openServiceModal(serviceKey) {
