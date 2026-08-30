@@ -88,9 +88,7 @@ textarea {
 
 .top-contact a {
   color: #6d6d6d;
-
   font-size: 14px;
-
   text-decoration: none;
 }
 
@@ -104,19 +102,15 @@ textarea {
 
 .top-actions {
   height: 100%;
-
   display: flex;
   align-items: center;
-
   gap: 12px;
 }
 
 
 .top-actions > a:not(.quote-button) {
   color: #555;
-
   font-size: 14px;
-
   text-decoration: none;
 }
 
@@ -146,12 +140,9 @@ textarea {
 
 .site-header {
   width: 100%;
-  height: 120px;
-
+  height: 180px;
   background: #10181d;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-
   position: relative;
   z-index: 100;
 }
@@ -160,10 +151,8 @@ textarea {
 .site-header-inner {
   max-width: 1400px;
   height: 100%;
-
   margin: 0 auto;
   padding: 0 70px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,12 +163,9 @@ textarea {
 
 .site-logo {
   color: #ffffff;
-
   font-size: 20px;
   font-weight: 700;
-
   letter-spacing: 0.14em;
-
   text-decoration: none;
 }
 
@@ -190,7 +176,7 @@ textarea {
   max-width: 1500px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
