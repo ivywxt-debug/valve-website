@@ -3,59 +3,45 @@
 ========================================= */
 
 
-/* -----------------------------------------
-   Header
------------------------------------------ */
+/* Header */
 
-.site-header {
+.quality-header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000;
 }
 
-
-/* -----------------------------------------
-   Services Hero
------------------------------------------ */
+/* Hero */
 
 .service-hero {
   position: relative;
-  min-height: 670px;
+  min-height: 620px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
-  padding: 155px 0 85px;
+  padding: 190px 0 95px;
   color: #ffffff;
   background:
     linear-gradient(
-      105deg,
-      rgba(13, 22, 27, 0.98) 0%,
-      rgba(23, 33, 38, 0.94) 48%,
-      rgba(61, 73, 79, 0.78) 100%
+      135deg,
+      #172126,
+      #384349
     );
 }
 
-.service-hero::before {
-  content: "";
+.service-hero-overlay{
   position: absolute;
   inset: 0;
-  opacity: 0.22;
   background:
     linear-gradient(
-      135deg,
-      transparent 0%,
-      transparent 56%,
-      rgba(255, 255, 255, 0.12) 56%,
-      rgba(255, 255, 255, 0.12) 57%,
-      transparent 57%,
-      transparent 100%
+      90deg,
+      rgba(10, 18, 22, 0.92) 0%,
+      rgba(10, 18, 22, 0.58) 60%,
+      rgba(10, 18, 22, 0.18) 100%
     );
-  pointer-events: none;
 }
 
-.service-hero .container {
+.service-hero-content {
   position: relative;
   z-index: 1;
 }
@@ -72,10 +58,9 @@
 
 .service-hero .hero-description {
   max-width: 680px;
-  margin: 30px 0 0;
+  margin: 28px 0 0;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: 1.05rem;
 }
 
 
@@ -485,96 +470,6 @@
 
 
 /* -----------------------------------------
-   Contact Sidebar
------------------------------------------ */
-
-.service-sidebar {
-  min-width: 0;
-}
-
-.sidebar-card {
-  position: sticky;
-  top: 25px;
-  padding: 36px 31px;
-  background: #ffffff;
-  border-top: 5px solid var(--accent);
-  box-shadow: 0 16px 42px rgba(18, 29, 34, 0.1);
-}
-
-.sidebar-card > h2 {
-  margin: 0 0 14px;
-  color: var(--text-dark);
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.12;
-}
-
-.sidebar-card > p:not(.section-label) {
-  margin: 0 0 29px;
-  color: var(--text-grey);
-  font-size: 0.91rem;
-  line-height: 1.65;
-}
-
-.sidebar-item {
-  padding: 19px 0;
-  border-top: 1px solid var(--border);
-}
-
-.sidebar-item > span {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.sidebar-item p,
-.sidebar-item a {
-  margin: 0;
-  color: var(--text-dark);
-  font-size: 0.91rem;
-  line-height: 1.55;
-  overflow-wrap: anywhere;
-}
-
-.sidebar-item a:hover {
-  color: var(--accent);
-}
-
-.sidebar-button {
-  width: 100%;
-  margin-top: 27px;
-}
-
-
-/* -----------------------------------------
-   Call to Action
------------------------------------------ */
-
-.service-information + .cta-section {
-  margin-top: 0;
-}
-
-.cta-section .light-label {
-  margin: 0 0 15px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.cta-section .cta-content > div > p:last-child {
-  max-width: 610px;
-  margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-
-/* -----------------------------------------
    Large Tablet
 ----------------------------------------- */
 
@@ -880,5 +775,118 @@
     background:#b56d34;
     color:white;
     border-color:#b56d34;
+
+}
+/* ==========================================
+   CONTACT CTA
+========================================== */
+
+.service-contact{
+
+    margin:100px 0;
+
+}
+
+.service-contact-box{
+
+    background:#ffffff;
+
+    border:1px solid var(--border);
+
+    padding:55px 60px;
+
+    box-shadow:0 18px 50px rgba(0,0,0,.06);
+
+}
+
+.service-contact-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.service-contact-text{
+
+    flex:1;
+
+}
+
+.service-contact-text h2{
+
+    margin:12px 0 18px;
+
+    font-size:2rem;
+
+}
+
+.service-contact-text p:last-child{
+
+    max-width:700px;
+
+    color:var(--text-grey);
+
+    line-height:1.7;
+
+}
+
+.service-contact-box hr{
+
+    margin:42px 0;
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+}
+
+.service-contact-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+}
+
+.contact-item{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+}
+
+.contact-icon{
+
+    font-size:1.4rem;
+
+    line-height:1;
+
+}
+
+.contact-item h4{
+
+    margin:0 0 6px;
+
+    font-size:.95rem;
+
+}
+
+.contact-item p{
+
+    margin:0;
+
+    color:var(--text-grey);
+
+    line-height:1.6;
 
 }

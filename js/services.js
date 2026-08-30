@@ -219,7 +219,7 @@ const serviceContent = {
     
       `
   }
-  }；
+  }
 
 
 function openServiceModal(serviceKey) {
