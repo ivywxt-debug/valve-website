@@ -3,16 +3,7 @@
 ========================================= */
 
 
-/* Header */
-
-.products-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-/* Products Hero */
+/* ------------------------------ HERO --------------------------------- */
 
 .products-hero {
   position: relative;
