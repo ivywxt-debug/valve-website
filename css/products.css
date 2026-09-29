@@ -3,22 +3,174 @@
 ========================================= */
 
 
+/* ------------------------------ PRODUCTS SHOWCASE OVERLAY --------------------------------- */
+.product-showcase {
+    position: fixed;
+    top: var(--showcase-top, 95px);
+    left: 0;
+    width: 100%;
+    background: #f4f6f6;
+    z-index: 900;
+    padding: 55px 0;
+    
+/* Hidden above the page at first */
+    transform: translateY(-110%);
+    opacity: 0;
+    transition:
+        transform 0.65s cubic-bezier(.22, .61, .36, 1),
+        opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Slide down */
+.product-showcase.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Slide back up */
+.product-showcase.is-hidden {
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Backdrop */
+
+.product-showcase-header {
+    margin-bottom: 40px;
+}
+
+.product-showcase-slider {
+    position: relative;
+}
+
+.product-showcase-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 0 56px 18px;
+}
+
+.product-showcase-track::-webkit-scrollbar {
+    display: none;
+}
+
+.showcase-image-link {
+    display: block;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.showcase-image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.showcase-card {
+    flex: 0 0 280px;
+    background: #fff;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: auto;          /* important */
+    min-height: 0;         /* important */
+}
+
+.showcase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0,0,0,.08);
+}
+
+.product-image {
+    width: 100%;
+    height: 320px;      /* 固定图片区域高度 */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+.showcase-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-right {
+    object-position: 35% center !important;
+}
+
+.image-lower {
+      transform: translateY(20px);
+}
+
+.showcase-card h3 {
+    margin: 0;
+    padding: 18px 16px 22px;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.product-showcase-arrow {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: rgba(255,255,255,.95);
+    cursor: pointer;
+    font-size: 1.6rem;
+    z-index: 10;
+}
+
+.product-showcase-arrow.prev {
+    left: 0;
+}
+
+.product-showcase-arrow.next {
+    right: 0;
+}
+
+.product-showcase-arrow:hover {
+    background: var(--accent);
+    color: #fff;
+}
 /* ------------------------------ HERO --------------------------------- */
 
 .products-hero {
-  position: relative;
-  min-height: 650px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 190px 0 100px;
-  color: #ffffff;
-  background:
-    url("../images/products/products-hero.jpg")
-    center / cover no-repeat,
-    var(--background-dark);
+    position: relative;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #ffffff;
 }
 
+/* Image fills the hero */
+
+.products-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark layer so text is readable */
 .products-hero-overlay {
   position: absolute;
   inset: 0;
@@ -29,27 +181,35 @@
       rgba(10, 18, 22, 0.76) 55%,
       rgba(10, 18, 22, 0.4) 100%
     );
-}
 
-.products-hero-content {
-  position: relative;
   z-index: 1;
 }
 
+/* Text sits above image */
+.products-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 1180px);
+  margin: 0 auto;
+}
+
+/* Heading */
+
 .products-hero h1 {
-  max-width: 960px;
+  max-width: 850px;
   margin: 0;
-  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.045em;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
 }
 
 .products-hero-description {
   max-width: 690px;
-  margin: 28px 0 36px;
-  color: rgba(255, 255, 255, 0.8);
+  margin-top: 30px;
+  color: rgba(255, 255, 255, .82);
   font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 
@@ -79,7 +239,102 @@
   margin-top: 0;
   margin-bottom: 22px;
 }
+/* ==========================================
+   PRODUCT IMAGE SLIDER
+========================================== */
 
+.product-slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 34px;
+    background: #f4f6f7;
+}
+
+.product-slide-track {
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+
+.product-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.product-slide.active {
+    opacity: 1;
+}
+
+
+/* Arrows */
+
+.product-slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.product-slide-arrow.prev {
+    left: 16px;
+}
+
+.product-slide-arrow.next {
+    right: 16px;
+}
+
+.product-slide-arrow:hover {
+    background: #ffffff;
+}
+
+
+/* Dots */
+
+.product-slide-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+    gap: 8px;
+}
+
+.slide-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+}
+
+.slide-dot.active {
+    background: #ffffff;
+}
 
 /* Categories */
 
@@ -213,7 +468,142 @@
   margin-top: auto;
 }
 
+/* ------------------------------MATERIAL------------------------------  */
 
+.materials-section {
+  width: 100%;
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.materials-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  align-items: center;
+  gap: 80px;
+}
+
+/* LEFT: IMAGE SLIDER */
+
+.materials-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f7f8fa;
+}
+
+.materials-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.materials-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.materials-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* SLIDER CONTROLS */
+
+.materials-slider-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 2;
+}
+
+.materials-prev,
+.materials-next {
+  border: none;
+  background: rgba(255,255,255,0.9);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.materials-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.materials-dot {
+  width: 7px;
+  height: 7px;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  background: #bcbcbc;
+  cursor: pointer;
+}
+
+.materials-dot.active {
+  background: #222222;
+}
+
+/* RIGHT: TEXT */
+
+.materials-content {
+  max-width: 480px;
+}
+
+.materials-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.materials-content h2 {
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 30px;
+}
+
+.materials-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .materials-section {
+    padding: 60px 0;
+  }
+
+  .materials-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .materials-content {
+    max-width: 100%;
+  }
+
+}
 /* OEM Process */
 
 .oem-process {

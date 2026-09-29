@@ -10,16 +10,16 @@
     name="description"
     content="Reliable valve components, precision nuts and custom machined parts for global industrial customers."
   />
-
+  <!--GLOBAL CSS -->
   <link rel="stylesheet" href="../css/style.css" />
+  <!-- Home Page CSS -->
+  <link rel="stylesheet" href="../css/home.css" />
 </head>
 
 <body>
 
   <!-- ========================= INDEX HEADER ========================== -->
 
-
-  <header class="site-header">
 
     <!-- Top Bar -->
 
@@ -44,15 +44,18 @@
         <a href="#" aria-label="LinkedIn">in</a>
         <a href="#" aria-label="Instagram">◎</a>
         <a href="#" aria-label="YouTube">▶</a>
+        <a href="../en/index.html" class="active">EN</a>
+          <span>|</span>
+         <a href="../zh/index.html">中文</a>
         <a href="contact.html" class="quote-button">Request a Quote</a>
-
       </div>
 
     </div>
 
    </div>
 
-    <!-- Navigation -->
+  <header class="site-header">
+   <!-- Navigation -->
 
     <div class="site-header-inner">
 
@@ -91,7 +94,13 @@
 
       <div class="hero-overlay"></div>
 
-      <div class="container hero-content">
+          <img
+        src="../images/home/hero-image.jpg"
+        alt="Precision Valve Components"
+        class="home-hero-image"
+    >
+
+      <div class="home-hero-content">
 
         <p class="hero-label">
           Valve Components & Custom Manufacturing
@@ -109,11 +118,11 @@
 
         <div class="hero-buttons">
 
-          <a href="pages/products.html" class="button button-primary">
+          <a href="../en/products.html" class="button button-primary">
             Explore Products
           </a>
 
-          <a href="pages/contact.html" class="button button-outline">
+          <a href="../en/contact.html" class="button button-outline">
             Request a Quote
           </a>
 
@@ -150,7 +159,7 @@
             machining to inspection and delivery.
           </p>
 
-          <a href="pages/company.html" class="text-link">
+          <a href="../en/company.html" class="Link To Company Page">
             Learn more about us
             <span>→</span>
           </a>
@@ -161,7 +170,7 @@
     </section>
 
 
-    <!-- Products Preview -->
+    <!-- ========================= PRODUCTS PREVIEW ========================== -->
     <section class="section products-preview">
 
       <div class="container">
@@ -176,26 +185,31 @@
             </h2>
           </div>
 
-          <a href="pages/products.html" class="text-link">
+          <a href="../en/products.html" class="Link To products Page">
             View all products
             <span>→</span>
           </a>
 
         </div>
-
-
+        
+        <!-- Products Images -->
+        <!--  Images 1 -->
         <div class="product-grid">
 
           <article class="product-card">
-
+            <a
+              href="../en/products.html#gate-valve-nut"
+              class="product-link"
+            >
             <div class="product-image">
-              <span>Product Image</span>
+              <img src="../images/home/gate-valve-nut/product-image-03.jpg" alt="Gate Valve">
             </div>
+            </a>
 
             <div class="product-content">
               <p class="product-number">01</p>
 
-              <h3>Valve Nuts</h3>
+              <h3>Gate Valve Nut</h3>
 
               <p>
                 Precision-manufactured nuts for valve assemblies
@@ -205,41 +219,47 @@
 
           </article>
 
-
+          <!--  Images 2 -->
           <article class="product-card">
-
+            
+            <article class="product-card">
+            <a
+              href="../en/products.html#gate-valve-nut"
+              class="product-link"
+            >
             <div class="product-image">
-              <span>Product Image</span>
+              <img src="../images/home/globe-valve-nut/product-image-03.jpg" alt="Globe Valve Components">
             </div>
+            </a>
 
             <div class="product-content">
               <p class="product-number">02</p>
 
-              <h3>Ball Valve Components</h3>
+              <h3>Globe Valve Nut</h3>
 
               <p>
-                Custom components produced according to drawings,
-                samples and specifications.
+                Precision-manufactured nuts for valve assemblies
+                and industrial equipment.
               </p>
             </div>
 
           </article>
 
-
           <article class="product-card">
 
             <div class="product-image">
-              <span>Product Image</span>
+              <img src="../images/home/material-use/d2-copper-02.jpg" alt="material use">
             </div>
 
             <div class="product-content">
-              <p class="product-number">03</p>
+              <p class="product-number">02</p>
 
-              <h3>Custom Machined Parts</h3>
+              <h3>Material Use
+              </h3>
 
               <p>
-                OEM metal components with flexible dimensions,
-                materials and surface treatments.
+                Precision-manufactured nuts for valve assemblies
+                and industrial equipment.
               </p>
             </div>
 
@@ -251,7 +271,72 @@
     </section>
 
 
-    <!-- CTA -->
+<!-- ===================================== QUALITY CERTIFICATIONS=====================================  -->
+
+<section class="home-certificates">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                Quality Assurance
+            </p>
+
+            <h2>
+                International Certifications
+            </h2>
+
+            <p class="section-description">
+                Every product is manufactured under strict quality-control procedures and supported by internationally recognized certifications.
+            </p>
+
+        </div>
+
+        <div class="certificate-slider">
+
+            <button class="certificate-arrow prev">
+                &#10094;
+            </button>
+
+            <div class="certificate-track">
+
+                <div class="certificate-card">
+                    <img src="../images/certificates/certificateVT-pv-01.jpg" alt="Trademark Certificate">
+                    <p>ISO 9001</p>
+                </div>
+
+                <div class="certificate-card active">
+                    <img src="../images/certificates/certificateVT-pv-02.jpg" alt="Company Registration Information">
+                    <p>API 6D</p>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../images/certificates/certificateVT-pv-03.jpg" alt="Trademark Registration Certificate">
+                    <p>CE</p>
+                </div>
+
+            </div>
+
+            <button class="certificate-arrow next">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="certificate-link">
+
+            <a href="quality.html" class="button button-outline">
+                View All Certifications →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== CTA=====================================  -->
     <section class="cta-section">
 
       <div class="container cta-content">
@@ -266,7 +351,7 @@
           </h2>
         </div>
 
-        <a href="pages/contact.html" class="button button-light">
+        <a href="../en/contact.html" class="button button-light">
           Send Your Requirements
         </a>
 
@@ -298,17 +383,17 @@
         <div>
           <h3>Company</h3>
 
-          <a href="pages/company.html">About Us</a>
-          <a href="pages/quality.html">Quality</a>
-          <a href="pages/services.html">Services</a>
+          <a href="../en/company.html">About Us</a>
+          <a href="../en/quality.html">Quality</a>
+          <a href="../en/services.html">Services</a>
         </div>
 
         <div>
           <h3>Products</h3>
 
-          <a href="pages/products.html">Valve Nuts</a>
-          <a href="pages/products.html">Valve Components</a>
-          <a href="pages/products.html">Custom Parts</a>
+          <a href="../en/products.html">Valve Nuts</a>
+          <a href="../en/products.html">Valve Components</a>
+          <a href="../en/products.html">Custom Parts</a>
         </div>
 
         <div>
@@ -341,7 +426,8 @@
   </footer>
 
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/home.js"></script>
 
 </body>
 </html>
