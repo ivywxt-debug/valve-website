@@ -15,16 +15,25 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 760px;
+  max-width: none;
+  height: 530px;
+  min-height: 0px;
   display: flex;
   align-items: center;
   overflow: hidden;
   color: #ffffff;
-  background:
-    url("../images/hero.jpg")
-    center center / cover no-repeat;
 }
 
+.home-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
+}
 
 .hero-overlay {
   position: absolute;
@@ -33,14 +42,15 @@
     linear-gradient(
       90deg,
       rgba(0,0,0,.65) 0%,
-            rgba(0,0,0,.45) 35%,
-            rgba(0,0,0,.20) 100%
+      rgba(0,0,0,.45) 35%,
+      rgba(0,0,0,.20) 100%
     );
+  z-index: 1;
 }
 
 .home-hero-content{
 
-    position:absolute;
+    position:relative;
     inset:0;
     max-width:1500px;
     width:100%;
@@ -50,7 +60,7 @@
     flex-direction:column;
     justify-content:center;
     align-items:flex-start;
-    z-index:3;
+    z-index: 2;
 
 }
 
@@ -77,7 +87,7 @@
   max-width: 630px;
   margin: 30px 0 38px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.08rem;
+  font-size: 1.125rem;
 }
 
 .hero-buttons {
@@ -206,6 +216,7 @@
 
 /* ------------------------------ PRODUCTS --------------------------------- */
 
+
 .products-preview {
   background: var(--background-light);
 }
@@ -235,13 +246,24 @@
 }
 
 .product-image {
-  min-height: 300px;
+  width: 100%;
+  height: 240px;
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #dce1e0;
+  background: #ffffff;
   color: var(--text-grey);
 }
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+   transform: translateY(20px);
+}
+
 
 .product-content {
   padding: 30px;
